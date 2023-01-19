@@ -1,0 +1,381 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* Those are styles for user before login or register */
+
+header {
+    height: 12vh;
+    background-color: #217DE6;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: solid 2px black;
+}
+
+.start {
+    width: 8rem;
+    height: 4rem;
+    border-radius: 20px;
+    border: 2px solid black;
+    margin: 0 30px;
+    font-weight: bold;
+    background-color: #E8E3E3;
+    box-shadow: 0 2px 8px black;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.exit {
+    display: none;
+}
+
+main {
+    background-color: white;
+}
+
+.main_div {
+    background-image: url('snowy.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 88vh;
+}
+
+.welcome-span {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3.5rem;
+    font-weight: bolder;
+    z-index: 10;
+    max-width: 750px;
+    min-height: 230px;
+    background-color: white;
+    border-radius: 40px;
+    padding-left: 20px;
+    box-shadow: 0 3px 10px black;
+}
+
+/* Those are styles for register modal */
+
+.main_div form.register {
+    background-color: #fff;
+    position: absolute;
+    width: 26rem;
+    height: 28rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 3px 10px black;
+    text-align: center;
+}
+
+.wrapper {
+    list-style: none;
+}
+
+.form-row {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+    font-weight: bold;
+}
+
+li button {
+    padding: 8px 50px;
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.reg-sign {
+    font-weight: bold;
+    font-size: 2rem;
+    font-style: italic;
+    text-transform: uppercase;
+}
+
+input {
+    outline: none;
+    border: solid 1px black;
+    border-radius: 3px;
+    background-color: #F0EEEE;
+}
+
+.register-form {
+    display: none;
+}
+
+.usernameError {
+    position: absolute;
+    top: 132px;
+    left: 230px;
+    color: red;
+}
+
+.passwordError {
+    position: absolute;
+    top: 195px;
+    left: 230px;
+    color: red;
+}
+
+.emailError {
+    position: absolute;
+    top: 258px;
+    left: 218px;
+    color: red;
+}
+
+.confirmationError {
+    position: absolute;
+    top: 321px;
+    left: 200px;
+    color: red;
+}
+
+/* Those are styles for login modal */
+
+.main_div form.login {
+    background-color: #fff;
+    position: absolute;
+    width: 26rem;
+    height: 20rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 3px 10px black;
+    text-align: center;
+}
+
+.login-form {
+    display: none;
+}
+
+.loginError {
+    position: absolute;
+    top: 210px;
+    left: 70px;
+    color: red;
+}
+
+.emailSpan {
+    position: absolute;
+    top: 133px;
+    left: 70px;
+    color: green;
+}
+
+/* Those are styles for logged in user */
+
+#loggedInUser {
+    position: absolute;
+    right: 15%;
+    top: 4.5%;
+    font-weight: bold;
+    color: white;
+    font-size: 1.2rem;
+}
+
+#expenses {
+    display: none;
+    flex-direction: row;
+    min-width: 100%;
+    height: 40vh;
+    position: absolute;
+    top: 12vh;
+    left: 50%;
+    transform: translate(-50%, 0);
+    background-color: #F0EEEE;
+    flex-wrap: wrap;
+    font-weight: bold;
+    border-bottom: solid 2px black;
+    font-size: 18px;
+    overflow-y: auto;
+}
+
+.expenses-child {
+    display: flex;
+    flex-direction: column;
+    min-width: 100%;
+    border-bottom: 1px solid black;
+}
+
+.expenses-child li {
+    display: flex;
+    list-style-type: none;
+    text-align: center;
+    justify-content: space-around;
+    margin-top: 12px;
+    flex-basis: 35px;
+}
+
+#date {
+    position: absolute;
+    left: 2%;
+}
+
+#type {
+    position: absolute;
+    left: 20%;
+}
+
+#description {
+    position: absolute;
+}
+
+#amount {
+    position: absolute;
+    right: 20%;
+}
+
+#balance {
+    position: absolute;
+    right: 2%;
+}
+
+#canvas {
+    display: none;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100vw;
+    height: 44vh;
+    margin-top: 20px;
+    background-color: transparent;
+}
+
+
+#canvasFirst {
+
+    width: 50vw;
+}
+
+#canvasSecond {
+
+    width: 25vw;
+}
+
+/* MEDIA QUERIES    */
+
+@media (max-width: 768px) {
+
+    .welcome-span {
+        font-size: 1.5rem;
+        border-radius: 20px;
+        padding: 15px;
+        min-height: 100px;
+    }
+
+    .start {
+        width: 7rem;
+        height: 2rem;
+    }
+
+    #date {
+        display: none;
+    }
+
+    #type {
+        left: 5%;
+    }
+
+    #amount {
+        position: absolute;
+        right: 5%;
+    }
+
+    #balance {
+        display: none;
+    }
+
+
+    #expenses {
+        font-size: 16px;
+        position: fixed;
+    }
+
+    header {
+        position: fixed;
+        width: 100%;
+    }
+
+    .main_div {
+        height: 100vh;
+    }
+
+    .main_div form.login {
+        width: 26rem;
+        height: 16rem;
+        padding: 15px;
+        border-radius: 10px;
+    }
+
+    .main_div form.register {
+        width: 26rem;
+        height: 22rem;
+        padding: 15px;
+        border-radius: 10px;
+    }
+
+    li button {
+        padding: 8px 20px;
+        position: absolute;
+        bottom: 3%;
+        left: 50%;
+        transform: translate(-50%, 0);
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    #canvas {
+        width: 180%;
+        height: 50vh;
+        overflow-x: auto;
+        position: absolute;
+        bottom: 5%;
+        margin-top: 0;
+    }
+
+    #canvasFirst {
+        max-height: 90%;
+        width: 50vw;
+        position: absolute;
+        left: 18%;
+        bottom: 0%;
+    }
+
+    #canvasSecond {
+        max-height: 90%;
+        width: 20vw;
+        position: absolute;
+        left: 68%;
+        bottom: 0%;
+    }
+
+    #loggedInUser {
+        position: absolute;
+        right: 20%;
+        top: 23.5%;
+        font-weight: bold;
+        color: white;
+        font-size: 1rem;
+    }
+}
+
+a {
+    width: 40px;
+}
