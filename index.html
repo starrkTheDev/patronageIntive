@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <div class="logAndReg">
+            <button id="logButton" class="start">Logowanie </button>
+            <button id="regButton" class="start">Rejestracja</button>
+        </div>
+        <div id="logout">
+            <span id="loggedInUser"></span>
+            <button id="logoutButton" class="start exit">Wyloguj</button>
+        </div>
+    </header>
+
+    <main>
+        <span class="welcome-span">Witaj na naszej stronie! Zarejestruj się lub zaloguj, aby kontynuować.</span>
+        <div class="main_div">
+            <div class="register-form">
+                <form class="register">
+                    <ul class="wrapper">
+                        <span class="reg-sign">rejestracja</span>
+                        <li class="form-row">
+                            <label for="username">Nazwa Użytkownika:</label>
+                            <input type="text" id="username" minlength="6" maxlength="16" required>
+                            <span class="usernameError"></span>
+                        </li>
+                        <li class="form-row">
+                            <label for="password">Hasło:</label>
+                            <input type="password" id="password" minlength="6" required>
+                            <span class="passwordError"></span>
+                        </li>
+                        <li class="form-row">
+                            <label for="email">E-mail:</label>
+                            <input type="email" id="email" required>
+                            <span class="emailError"></span>
+                        </li>
+                        <li class="form-row">
+                            <label for="confirm">Potwierdź E-mail:</label>
+                            <input type="email" id="confirm" required>
+                            <span class="confirmationError"></span>
+                        </li>
+                        <li class="form-row">
+                            <button id="registerSubmit" type="submit">Zarejestruj</button>
+                        </li>
+                    </ul>
+                </form>
+            </div>
+            <div class="login-form">
+                <form class="login">
+                    <ul class="wrapper">
+                        <span class="reg-sign">logowanie</span>
+                        <li class="form-row">
+                            <label for="username">Nazwa/E-mail:</label>
+                            <input type="text" id="loginUsername" minlength="6" maxlength="16">
+                        </li>
+                        <li class="form-row">
+                            <label for="password">Hasło:</label>
+                            <input type="password" id="loginPassword" minlength="6">
+                            <span class="loginError"></span>
+                            <span class="emailSpan"></span>
+                        </li>
+                        <li class="form-row">
+                            <button id="loginSubmit" type="submit">Zaloguj</button>
+                        </li>
+                    </ul>
+                </form>
+            </div>
+
+            <div>
+                <ul id="expenses">
+                </ul>
+            </div>
+        </div>
+    </main>
+    <div id="canvas">
+        <div id="canvasFirst">
+            <canvas id="myChart"></canvas>
+        </div>
+        <div id="canvasSecond">
+            <canvas id="mypieChart"></canvas>
+        </div>
+    </div>
+
+    <script src="javascript.js">
+
+    </script>
+
+</body>
+
+</html>
